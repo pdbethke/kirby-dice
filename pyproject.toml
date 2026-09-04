@@ -1,0 +1,38 @@
+[project]
+name = "kirby-dice"
+version = "0.1.0"
+description = "Fair, seeded, replayable dice for the Kirby HERO System platform"
+requires-python = ">=3.12"
+# Matches kirby-cost and kirby-combat. The roller itself is based in part on
+# Bill Bame's work, shared informally with no licence condition attached.
+license = {text = "PolyForm Noncommercial License 1.0.0"}
+readme = "README.md"
+authors = [{name = "PeterB"}]
+# No dependencies, and that is a feature: this package must be trivially
+# auditable by anyone who wants to check that the dice are fair.
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/pdbethke/kirby-dice"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+    "ruff>=0.6",
+]
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["kirby_dice*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
