@@ -1,6 +1,6 @@
 [project]
 name = "kirby-dice"
-version = "0.1.0"
+version = "0.1.1"
 description = "Fair, seeded, replayable dice for the Kirby HERO System platform"
 requires-python = ">=3.12"
 # Matches kirby-cost and kirby-combat. The roller itself is based in part on

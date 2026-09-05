@@ -1,5 +1,23 @@
 # Changelog
 
+## 0.1.1 — 2026-09-05
+
+### Fixed
+
+The `LICENSE` file described a different package. It was copied from kirby-cost
+when this repo was created and its notes section still said this work "is a
+Python port of the HERO Designer cost engine" and "derives from HERO Designer
+source licensed from CompNet Design, Inc."
+
+Neither is true. kirby-dice rolls dice; it holds no game data and no rules, and
+it derives from Bill Bame's informally-shared work, not from the HERO Designer
+source. In a project that keeps its licensing lanes deliberately separate, a
+published package asserting a derivation it does not have is worth a release to
+correct.
+
+No code changed. The PolyForm Noncommercial 1.0.0 text itself was never wrong
+and is untouched.
+
 ## 0.1.0 — 2026-09-04
 
 First release. Extracted from `kirby_combat.dice`, where the roller had lived
